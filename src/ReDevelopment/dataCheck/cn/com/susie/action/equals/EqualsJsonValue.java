@@ -19,7 +19,8 @@ public class EqualsJsonValue {
 
     public EqualsJsonValue() {
         // TODO Auto-generated constructor stub
-        System.out.println("<<======================== TestInit! ========================>>");
+        log.info("EqualsJsonValue TestInit!!!");
+        System.out.println("<<======================== EqualsJsonValue TestInit! ========================>>");
     }
 
     private String fatherName = "";

@@ -13,6 +13,7 @@ public class EqualsJsonType {
 	private static Logger log = (Logger) LoggerFactory.getLogger(EqualsJsonType.class);
 
 	public EqualsJsonType() {
+		log.info("EqualsJsonValue TestInit!!!");
 		// TODO Auto-generated constructor stub
 		System.out.println("<<======================== TestInit! ========================>>");
 	}
