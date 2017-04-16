@@ -74,7 +74,7 @@ public class EqualsJsonValue {
                             else{
                                 err_message1 = arrayCompare(thisKeyValue, respKeyValue); // 两个数组对比
                             }
-                            if(!err_message1.equals("")){ // 数组不匹配:保存到错误信息里面
+                            if(!err_message1.replaceAll("\n", "").equals("")){ // 数组不匹配:保存到错误信息里面
                                 err_message = (err_message + "\n------ArrayError : " + fatherName + key + "\n" + err_message1);
                             }
                         } else { //响应并非Array类型：保存错误信息
@@ -94,10 +94,8 @@ public class EqualsJsonValue {
 
     public Boolean respValueAssertion(String standardData, String resData) { //输入标准响应，转为json并调用比较函数，得到断言结果
         JSONObject standardJson = new JSONObject(standardData);
-        JSONObject jo = new JSONObject(resData);
-        //JSONObject responseJson = jo.getJSONObject("data");
-        //message = equalsJsonValue(standardJson, responseJson);
-        message = equalsJsonValue(standardJson, jo);
+        JSONObject responseJson = new JSONObject(resData);
+        message = equalsJsonValue(standardJson, responseJson);
         log.info(message);
         if (message.replaceAll(" ", "").equals("")) {    //如果错误信息是空，说明断言结果通过
             return true;
