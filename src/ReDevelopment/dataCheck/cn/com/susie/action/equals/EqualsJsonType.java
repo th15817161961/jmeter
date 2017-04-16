@@ -14,6 +14,7 @@ public class EqualsJsonType {
 
 	public EqualsJsonType() {
 		// TODO Auto-generated constructor stub
+		log.info("EqualsJsonType TestInit!");
 		System.out.println("<<======================== TestInit! ========================>>");
 	}
     private String fatherName = "";
