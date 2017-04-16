@@ -21,6 +21,7 @@
     xmlns="antlib:org.apache.tools.ant" >
   <description>
 
+
   N.B. To build JMeter from a release you need both the binary and source archives,
   and these must be unpacked into the same directory structure.
 
